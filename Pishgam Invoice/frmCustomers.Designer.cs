@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,20 +39,30 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtEconomicCode = new System.Windows.Forms.TextBox();
+            this.txtRegiserCode = new System.Windows.Forms.TextBox();
+            this.txtProvince = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtState = new System.Windows.Forms.TextBox();
+            this.txtPostalCode = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.economicCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.registerCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.province = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.state = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.city = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,20 +84,21 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "نام شخص حقیقی / حقوقی:";
             // 
-            // textBox1
+            // txtID
             // 
-            this.textBox1.Location = new System.Drawing.Point(681, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 28);
-            this.textBox1.TabIndex = 2;
+            this.txtID.Location = new System.Drawing.Point(681, 30);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(164, 28);
+            this.txtID.TabIndex = 2;
             // 
-            // textBox2
+            // txtName
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 30);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(501, 28);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtName.Location = new System.Drawing.Point(12, 30);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(501, 28);
+            this.txtName.TabIndex = 3;
+            this.txtName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -153,26 +164,26 @@
             this.label9.Text = "شماره تلفن / نمابر:";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // textBox3
+            // txtEconomicCode
             // 
-            this.textBox3.Location = new System.Drawing.Point(619, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(175, 28);
-            this.textBox3.TabIndex = 11;
+            this.txtEconomicCode.Location = new System.Drawing.Point(619, 64);
+            this.txtEconomicCode.Name = "txtEconomicCode";
+            this.txtEconomicCode.Size = new System.Drawing.Size(175, 28);
+            this.txtEconomicCode.TabIndex = 11;
             // 
-            // textBox4
+            // txtRegiserCode
             // 
-            this.textBox4.Location = new System.Drawing.Point(288, 64);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(183, 28);
-            this.textBox4.TabIndex = 12;
+            this.txtRegiserCode.Location = new System.Drawing.Point(288, 64);
+            this.txtRegiserCode.Name = "txtRegiserCode";
+            this.txtRegiserCode.Size = new System.Drawing.Size(183, 28);
+            this.txtRegiserCode.TabIndex = 12;
             // 
-            // textBox5
+            // txtProvince
             // 
-            this.textBox5.Location = new System.Drawing.Point(12, 64);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(221, 28);
-            this.textBox5.TabIndex = 13;
+            this.txtProvince.Location = new System.Drawing.Point(12, 64);
+            this.txtProvince.Name = "txtProvince";
+            this.txtProvince.Size = new System.Drawing.Size(221, 28);
+            this.txtProvince.TabIndex = 13;
             // 
             // label10
             // 
@@ -183,40 +194,40 @@
             this.label10.TabIndex = 14;
             this.label10.Text = "شهرستان:";
             // 
-            // textBox6
+            // txtState
             // 
-            this.textBox6.Location = new System.Drawing.Point(619, 98);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(205, 28);
-            this.textBox6.TabIndex = 15;
+            this.txtState.Location = new System.Drawing.Point(619, 98);
+            this.txtState.Name = "txtState";
+            this.txtState.Size = new System.Drawing.Size(205, 28);
+            this.txtState.TabIndex = 15;
             // 
-            // textBox7
+            // txtPostalCode
             // 
-            this.textBox7.Location = new System.Drawing.Point(318, 98);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(183, 28);
-            this.textBox7.TabIndex = 16;
+            this.txtPostalCode.Location = new System.Drawing.Point(318, 98);
+            this.txtPostalCode.Name = "txtPostalCode";
+            this.txtPostalCode.Size = new System.Drawing.Size(183, 28);
+            this.txtPostalCode.TabIndex = 16;
             // 
-            // textBox8
+            // txtCity
             // 
-            this.textBox8.Location = new System.Drawing.Point(12, 98);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(259, 28);
-            this.textBox8.TabIndex = 17;
+            this.txtCity.Location = new System.Drawing.Point(12, 98);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(259, 28);
+            this.txtCity.TabIndex = 17;
             // 
-            // textBox9
+            // txtAddress
             // 
-            this.textBox9.Location = new System.Drawing.Point(288, 132);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(552, 28);
-            this.textBox9.TabIndex = 18;
+            this.txtAddress.Location = new System.Drawing.Point(288, 132);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(552, 28);
+            this.txtAddress.TabIndex = 18;
             // 
-            // textBox10
+            // txtPhoneNumber
             // 
-            this.textBox10.Location = new System.Drawing.Point(12, 132);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(155, 28);
-            this.textBox10.TabIndex = 19;
+            this.txtPhoneNumber.Location = new System.Drawing.Point(12, 132);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(155, 28);
+            this.txtPhoneNumber.TabIndex = 19;
             // 
             // button1
             // 
@@ -245,22 +256,95 @@
             this.button3.Text = "حذف";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnRegister
             // 
-            this.button4.Location = new System.Drawing.Point(449, 166);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(106, 28);
-            this.button4.TabIndex = 23;
-            this.button4.Text = "ثبت";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnRegister.Location = new System.Drawing.Point(449, 166);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(106, 28);
+            this.btnRegister.TabIndex = 23;
+            this.btnRegister.Text = "ثبت";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // dgvCustomers
             // 
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.name,
+            this.economicCode,
+            this.registerCode,
+            this.province,
+            this.state,
+            this.postalCode,
+            this.city,
+            this.address,
+            this.phoneNumber});
             this.dgvCustomers.Location = new System.Drawing.Point(12, 200);
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.Size = new System.Drawing.Size(879, 231);
             this.dgvCustomers.TabIndex = 24;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "ID";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "Name";
+            this.name.HeaderText = "نام شرکت";
+            this.name.Name = "name";
+            // 
+            // economicCode
+            // 
+            this.economicCode.DataPropertyName = "Economic Code";
+            this.economicCode.HeaderText = "کد اقتصادی";
+            this.economicCode.Name = "economicCode";
+            // 
+            // registerCode
+            // 
+            this.registerCode.DataPropertyName = "RegisterCode";
+            this.registerCode.HeaderText = "شماره ثبت";
+            this.registerCode.Name = "registerCode";
+            // 
+            // province
+            // 
+            this.province.DataPropertyName = "Province";
+            this.province.HeaderText = "استان";
+            this.province.Name = "province";
+            // 
+            // state
+            // 
+            this.state.DataPropertyName = "State";
+            this.state.HeaderText = "شهرستان";
+            this.state.Name = "state";
+            // 
+            // postalCode
+            // 
+            this.postalCode.DataPropertyName = "PostalCode";
+            this.postalCode.HeaderText = "کد پستی";
+            this.postalCode.Name = "postalCode";
+            // 
+            // city
+            // 
+            this.city.DataPropertyName = "City";
+            this.city.HeaderText = "شهر";
+            this.city.Name = "city";
+            // 
+            // address
+            // 
+            this.address.DataPropertyName = "Address";
+            this.address.HeaderText = "آدرس";
+            this.address.Name = "address";
+            // 
+            // phoneNumber
+            // 
+            this.phoneNumber.DataPropertyName = "PhoneNumber";
+            this.phoneNumber.HeaderText = "تلفن";
+            this.phoneNumber.Name = "phoneNumber";
             // 
             // frmCustomers
             // 
@@ -268,19 +352,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 443);
             this.Controls.Add(this.dgvCustomers);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtPhoneNumber);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtCity);
+            this.Controls.Add(this.txtPostalCode);
+            this.Controls.Add(this.txtState);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtProvince);
+            this.Controls.Add(this.txtRegiserCode);
+            this.Controls.Add(this.txtEconomicCode);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -288,8 +372,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Vazir FD", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -310,8 +394,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -319,19 +403,29 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtEconomicCode;
+        private System.Windows.Forms.TextBox txtRegiserCode;
+        private System.Windows.Forms.TextBox txtProvince;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtState;
+        private System.Windows.Forms.TextBox txtPostalCode;
+        private System.Windows.Forms.TextBox txtCity;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.DataGridView dgvCustomers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn economicCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn registerCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn province;
+        private System.Windows.Forms.DataGridViewTextBoxColumn state;
+        private System.Windows.Forms.DataGridViewTextBoxColumn postalCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn city;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
     }
 }

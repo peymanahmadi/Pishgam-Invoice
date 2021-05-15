@@ -27,7 +27,8 @@ namespace Pishgam_Invoice
             DataTable dt_Date = new DataTable();
             dt_Date.Columns.Add("date");
             dt_Date.Rows.Add();
-            dt_Date.Rows[0]["date"] = "1396/04/25";
+            dt_Date.Rows[0]["date"] = "1399/12/03";
+            dt_Date.Rows[0]["date"] = "1399/12/03";
             //
             SqlDataAdapter da = new SqlDataAdapter("Report_Invoice_Number", con);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
@@ -39,7 +40,7 @@ namespace Pishgam_Invoice
             ds.Merge(dt_Invoice);
             ds.Tables[0].TableName = "dt_Date";
             ds.Tables[1].TableName = "dt_Invoice";
-            stiReport_Invoice.Load("stiReport_Invoice.mrt");
+            stiReport_Invoice.Load("stiReport_Invoice_FKA.mrt");
             stiReport_Invoice.RegData(ds);
             stiReport_Invoice.Show();
         }
@@ -48,6 +49,18 @@ namespace Pishgam_Invoice
         {
             frmCustomers customers = new frmCustomers();
             customers.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmInvoice invoice = new frmInvoice();
+            invoice.ShowDialog();
+        }
+
+        private void btnServices_Click(object sender, EventArgs e)
+        {
+            frmServices services = new frmServices();
+            services.ShowDialog();
         }
     }
 }

@@ -34,6 +34,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnServices = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // stiReport_Invoice
@@ -50,7 +52,7 @@
         "Stimulsoft.Base.Dll",
         "Stimulsoft.Report.Dll"};
             this.stiReport_Invoice.ReportAlias = "Report";
-            this.stiReport_Invoice.ReportGuid = "2b4afdb029f04160b11eb6ac8614490c";
+            this.stiReport_Invoice.ReportGuid = "d33205b97c554aa984cfe93bb9a90ca7";
             this.stiReport_Invoice.ReportImage = null;
             this.stiReport_Invoice.ReportName = "Report";
             this.stiReport_Invoice.ReportSource = resources.GetString("stiReport_Invoice.ReportSource");
@@ -94,11 +96,33 @@
             this.button3.Text = "اطلاعات شرکت";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(564, 82);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(161, 29);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "فاکتور جدید";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnServices
+            // 
+            this.btnServices.Location = new System.Drawing.Point(564, 117);
+            this.btnServices.Name = "btnServices";
+            this.btnServices.Size = new System.Drawing.Size(161, 29);
+            this.btnServices.TabIndex = 7;
+            this.btnServices.Text = "سرویس ها";
+            this.btnServices.UseVisualStyleBackColor = true;
+            this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 402);
+            this.Controls.Add(this.btnServices);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
@@ -119,6 +143,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnServices;
     }
 }
 
