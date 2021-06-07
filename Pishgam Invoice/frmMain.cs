@@ -27,8 +27,8 @@ namespace Pishgam_Invoice
             DataTable dt_Date = new DataTable();
             dt_Date.Columns.Add("date");
             dt_Date.Rows.Add();
-            dt_Date.Rows[0]["date"] = "1399/12/03";
-            dt_Date.Rows[0]["date"] = "1399/12/03";
+            dt_Date.Rows[0]["date"] = "1400/03/17";
+            dt_Date.Rows[0]["date"] = "1400/03/17";
             //
             SqlDataAdapter da = new SqlDataAdapter("Report_Invoice_Number", con);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
@@ -40,7 +40,7 @@ namespace Pishgam_Invoice
             ds.Merge(dt_Invoice);
             ds.Tables[0].TableName = "dt_Date";
             ds.Tables[1].TableName = "dt_Invoice";
-            stiReport_Invoice.Load("stiReport_Invoice_FKA.mrt");
+            stiReport_Invoice.Load("stiReport_Invoice_Fazil.mrt");
             stiReport_Invoice.RegData(ds);
             stiReport_Invoice.Show();
         }
